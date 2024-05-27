@@ -1,0 +1,252 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  height: auto;
+  background: linear-gradient(150deg, #9D54D6, #596BB8); 
+}
+
+/* NAVBAR */
+.nav {
+  display: flex;
+  align-items: center;
+  position: fixed; /* Torna a navegação fixa */
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0); /* Transparente */
+  padding: 15px 25px;
+  z-index: 1000; 
+}
+.nav-brand {
+  display: flex;
+  align-self: flex-start;
+  
+}
+.nav-title, .nav-click-content{
+  margin: 0;
+}
+.nav-title {
+  margin: 0;
+  color: #FFFF;
+  font-weight: 700;
+    font-size: 25px;
+}
+.nav-logo {
+  height: 30px;
+  margin-right: 7px;
+
+}
+.nav-click-content {
+  margin-left: auto;
+  display: flex;
+
+}
+.home-link, .favorites-link, .shuffle-link {
+  color: #FFF;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 15px;
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+
+.nav-click-content button:hover {
+  background-color: #e0e0e0; /* Cor de fundo ao passar o mouse */
+}
+
+
+/* HOME */
+
+.home-container {
+  
+  color: #FFF;
+  display: flex;
+  position: relative; /* Garante que a descrição seja fixada em relação a este contêiner */
+  height: 100vh;
+}
+
+
+.title-animation {
+  margin-top: 180px;
+  margin-left: 35px;
+  margin-right: 100px; /* Move o título mais para a esquerda */
+  font-size: 8vw;
+  
+}
+@media (max-width: 1200px) {
+  .title-animation {
+    font-size: 10vw; /* Ajusta o tamanho para telas menores */
+  }
+  .title-description {
+    font-size: 1vw; /* Ajusta o tamanho para telas menores */
+  }
+}
+
+@media (max-width: 768px) {
+  .title-animation {
+    font-size: 12vw; /* Ajusta o tamanho para tablets */
+  }
+  .title-description {
+    font-size: 2vw; /* Ajusta o tamanho para telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .title-animation {
+    font-size: 15vw; /* Ajusta o tamanho para celulares */
+  }
+  .title-description {
+    font-size: 3vw; /* Ajusta o tamanho para telas menores */
+  }
+}
+.title-description {
+  position: absolute; /* Torna a descrição fixa em relação ao contêiner pai */
+  left: 20px; /* Define a distância da descrição à esquerda */
+  font-size: 3vw;
+  padding-top: 540px;
+  
+  max-width: 600px;
+  margin: 0px 25px; /* Remove a margem interna */
+}
+
+
+/* SHUFFLE */
+
+.shuffle-container {
+  height:150vh;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+  position: relative;
+
+}
+
+.shuffle-description{
+  color: #FFF;
+  
+}
+
+.button-shuffle{
+  width: 200px;
+  height: 70px;
+  border: none;
+  background: linear-gradient(#b047ae, #7E3272); 
+  border-radius: 35px;
+  font-size: 25px;
+  color: #FFF;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top:40px;
+  margin-bottom:40px;
+
+  transform: translateX(-50%);
+  margin-left: 200px;
+}
+.button-shuffle:hover {
+  background: linear-gradient(#7E3272, #b047ae); /* Muda o gradiente ao passar o mouse */
+}
+
+.button-shuffle:active {
+  background: linear-gradient(#7E3272, #b047ae); /* Muda o gradiente ao clicar */
+}
+.shuffle-box {
+  background-color: #5238b1;
+  border-radius: 25px;
+  width: 950px;
+  height: 400px;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 200;
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  bottom: 100px;
+}
+
+.track-details {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center; 
+  overflow-wrap: break-word; 
+  margin-left: 40px;
+ 
+}
+
+.track-img {
+  width: 250px;
+  height: 250px;
+  
+  align-self:center;
+  
+}
+
+
+/* FOOTER */
+
+.foot-container {
+  height: 30vh;
+  background-color: #9D54D6;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+footer {
+  width: 100%;
+  max-width: 800px;
+}
+
+.footer-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.credit, .contact {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.credit {
+  align-items: flex-start;
+  text-align: left;
+  
+}
+
+.contact {
+  align-items: flex-end;
+  text-align: right;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+.spotify-logo {
+  width: 110px;
+  height: auto;
+}
+
+.social-logo {
+  width: 24px; 
+  height: 24px;
+  margin-right: 8px; 
+  background-color: transparent; /* Garante que o fundo é transparente */
+}
